@@ -41,7 +41,7 @@ public class User extends AbstractAuditingEntity implements Serializable {
 	@Column(name = "sec_user_login", unique = true, length = 60)
 	@NotNull
 	@Pattern(regexp = Validation.LOGIN_PATTERN)
-	@Size(min = 1, max = 60)
+	@Size(min = 5, max = 60)
 	private String login;
 
 	@Email

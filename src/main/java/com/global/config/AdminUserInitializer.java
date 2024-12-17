@@ -40,12 +40,12 @@ public class AdminUserInitializer implements CommandLineRunner {
             });
 
             // Create 2 admin users and assign the 'ROLE_ADMIN' role
-            User admin1 = createUser("admin1", "1a41c06ae2@emailvb.pro", "Admin1", " ", "MySecure@Password1", adminRole);
-            User admin2 = createUser("admin2", "admin2@example.com", "Admin2", " ", "MySecure@Password1", adminRole);
+            User admin1 = createUser("admin1", "1a41c06ae2@emailvb.pro", "Admin1", " ", "SecureAdmin1@2024", adminRole);
+            User admin2 = createUser("admin2", "admin2@example.com", "Admin2", " ",  "StrongPass2@2024", adminRole);
 
             // Create 2 regular users and assign the 'ROLE_USER' role
-            User user1 = createUser("user1", "e6eb8b9fab@emailvb.pro", "User1", " ", "MySecure@Password1", userRole);
-            User user2 = createUser("user2", "user2@example.com", "User2", " ", "MySecure@Password1", userRole);
+            User user1 = createUser("user1", "e6eb8b9fab@emailvb.pro", "User1", " ", "RegularUser1@2024", userRole);
+            User user2 = createUser("user2", "user2@example.com", "User2", " ", "NormalUser2@2024", userRole);
 
             // Save all created users into the database
             userRepository.save(admin1);
