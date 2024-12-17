@@ -1,5 +1,6 @@
 package com.global.entity;
 
+import java.io.Serializable;
 import java.time.Instant;
 import java.util.HashSet;
 import java.util.Set;
@@ -27,7 +28,10 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(name = "sec_user")
-public class User extends AbstractAuditingEntity {
+public class User extends AbstractAuditingEntity implements Serializable {
+
+	private static final long serialVersionUID = 1L;
+
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,8 +39,8 @@ public class User extends AbstractAuditingEntity {
 	private Long id;
 
 	@Column(name = "sec_user_login", unique = true, length = 60)
-	@NotBlank
-	//@Pattern(regexp = Validation.LOGIN_PATTERN)
+	@NotNull
+	@Pattern(regexp = Validation.LOGIN_PATTERN)
 	@Size(min = 1, max = 60)
 	private String login;
 
@@ -47,7 +51,7 @@ public class User extends AbstractAuditingEntity {
 
 	@Column(name = "sec_user_password_hash", length = 100, nullable = false)
 	@Nonnull
-	//@Pattern(regexp = Validation.PASSWORD_PATTERN, message = "Password must meet the security requirements.")
+	@Pattern(regexp = Validation.PASSWORD_PATTERN, message = "Password must meet the security requirements.")
 	@JsonIgnore
 	@Size(min = 10, max = 100)
 	private String password;

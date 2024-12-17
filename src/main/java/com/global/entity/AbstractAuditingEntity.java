@@ -1,5 +1,6 @@
 package com.global.entity;
 
+import java.io.Serializable;
 import java.time.Instant;
 
 import org.springframework.data.annotation.CreatedBy;
@@ -24,7 +25,10 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public abstract class AbstractAuditingEntity {
+
+public abstract class AbstractAuditingEntity implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 
 	@CreatedBy
 	@Column(name = "created_by", nullable = false, length = 50, updatable = false)
