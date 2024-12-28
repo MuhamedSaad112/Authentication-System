@@ -3,6 +3,10 @@
 ## Overview
 A comprehensive authentication and user management system built with Spring Boot 3.4.0 and Java 21. This project implements enterprise-level security patterns and modern architectural practices for secure user authentication and authorization.
 
+## Database Design (Class Diagram)
+![Authentication System](https://github.com/user-attachments/assets/500ef46f-d57d-4ff2-8339-68a2d521072c)
+
+
 ## Features
 - *Advanced Authentication*
   - JWT-based token authentication
