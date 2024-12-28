@@ -40,7 +40,7 @@ public class User extends AbstractAuditingEntity implements Serializable {
 
 	@Column(name = "sec_user_login", unique = true, length = 60)
 	@NotNull
-	@Pattern(regexp = Validation.LOGIN_PATTERN)
+	//@Pattern(regexp = Validation.LOGIN_PATTERN)
 	@Size(min = 5, max = 60)
 	private String login;
 
@@ -51,7 +51,7 @@ public class User extends AbstractAuditingEntity implements Serializable {
 
 	@Column(name = "sec_user_password_hash", length = 100, nullable = false)
 	@Nonnull
-	@Pattern(regexp = Validation.PASSWORD_PATTERN, message = "Password must meet the security requirements.")
+//	@Pattern(regexp = Validation.PASSWORD_PATTERN, message = "Password must meet the security requirements.")
 	@JsonIgnore
 	@Size(min = 10, max = 100)
 	private String password;
