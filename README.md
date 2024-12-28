@@ -191,6 +191,11 @@ POST /api/v1/account/reset-password/finish
 4. Push to the branch (git push origin feature/AmazingFeature)
 5. Open a Pull Request
 
+## Acknowledgments
+- Spring Security Documentation
+- JWT Authentication Best Practices
+- Redis Caching Patterns
+
 ## 📞 Contact
 
 📝 ***Feel free to contact me. I am always here ...***
@@ -201,7 +206,4 @@ POST /api/v1/account/reset-password/finish
 ## Author
 Mohamed Saad - [GitHub Profile](https://github.com/MuhamedSaad112)
 
-## Acknowledgments
-- Spring Security Documentation
-- JWT Authentication Best Practices
-- Redis Caching Patterns
+
